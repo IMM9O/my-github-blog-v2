@@ -7,38 +7,22 @@ eleventyNavigation:
   order: 3
 ---
 
-My name is islam muhammad (AKA: IMM9O),
-I'm a frontend software developer with industry experience building websites and web applications.
-I specialize in JavaScript and have professional experience working with PHP, Angular, React, Ionic, Codeigniter, OpenCart, Laravel, MySQL database and familiar with Vue and WordPress.
-I love reading about architecture, performance and scalability.
-I am really passionate about the latest technologies and updates so I write blog posts when I am available so please keep in touch.
 
-<table align="center">
-    <tr>
-        <td>
-            <a href="https://github.com/IMM9O">
-              <img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/github.png" alt="github logo" width="34">
-            </a>
-        </td>
-        <td>
-            <a href="https://www.linkedin.com/in/islam-muhammad/">
-              <img src="https://gfx4arab.com/wp-content/uploads/2020/06/linkedin-icon-2.svg" alt="linkedin logo" width="34">
-            </a>
-        </td>
-        <td>
-            <a href="https://twitter.com/IMM9OO">
-              <img src="https://raw.githubusercontent.com/Delta456/Delta456/master/img/twitter.png" alt="twitter logo" width="34">
-            </a>
-        </td>
-        <td>
-            <a href="https://medium.com/@IMM9O">
-              <img src="https://img.uxfree.com/wp-content/uploads/2017/03/medium-icon-white-on-black.png" alt="medium logo" width="54">
-            </a>
-        </td>
-        <td>
-            <a href="https://dev.to/imm9o">
-              <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands-1/512/84_Dev_logo_logos-512.png" alt="dev logo" width="34">
-            </a>
-        </td>
-    </tr>
-<table>
+Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, voracious reader, blogger, and ambitious frontend engineer who is passionate about building large-scale apps with a focus on accessibility and performance 👨‍💻.
+
+I really enjoy working on large-scale apps starting from conceptional and design software architecture to implementation with a primary focus on performance and accessibility. 
+
+I specialize in JavaScript and have professional experience working with PHP, Angular, React, Redux, TypeScript, Ionic, Laravel, MySQL database, and familiar with Vue and WordPress.
+
+Also, I am really passionate about the latest technologies and updates so I write blog posts when I am available so please keep in touch.
+
+<p align="center">
+<a href="https://medium.com/@imm9o" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@imm9o" height="30" width="40" /></a>
+<a href="https://dev.to/imm9o" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="imm9o" height="30" width="40" /></a>
+<a href="https://imm9o.github.io/feed/feed.xml" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/rss.svg" alt="https://imm9o.github.io/feed/feed.xml" height="30" width="40" /></a>
+<a href="https://codepen.io/imm9o" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="imm9o" height="30" width="40" /></a>
+<a href="https://codesandbox.com/imm9o" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codesandbox.svg" alt="imm9o" height="30" width="40" /></a>
+<a href="https://twitter.com/imm9oo" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="imm9oo" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/islam-muhammad" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="islam-muhammad" height="30" width="40" /></a>
+<a href="https://fb.com/imm9o" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="imm9o" height="30" width="40" /></a>
+</p>
