@@ -9,9 +9,11 @@
     
   
   
+    
+  
   <url>
     <loc>https://imm9o.github.io/about/</loc>
-    <lastmod>2020-10-16T12:58:04.635Z</lastmod>
+    <lastmod>2020-10-16T15:58:56.000Z</lastmod>
   </url>
   
   
@@ -75,19 +77,6 @@
   
   
   <url>
-    <loc>https://imm9o.github.io/tags/javascript/</loc>
-    <lastmod>2020-10-16T12:58:04.752Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-  <url>
     <loc>https://imm9o.github.io/tags/react/</loc>
     <lastmod>2020-10-16T12:58:04.752Z</lastmod>
   </url>
@@ -101,8 +90,8 @@
   
   
   <url>
-    <loc>https://imm9o.github.io/posts/web_components_with_angular/</loc>
-    <lastmod>2020-10-16T13:26:55.379Z</lastmod>
+    <loc>https://imm9o.github.io/tags/javascript/</loc>
+    <lastmod>2020-10-16T12:58:04.752Z</lastmod>
   </url>
   
   
@@ -112,10 +101,27 @@
   
     
   
+  
+    
+  
+  <url>
+    <loc>https://imm9o.github.io/posts/web_components_with_angular/</loc>
+    <lastmod>2020-10-16T15:58:56.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
   
   <url>
     <loc>https://imm9o.github.io/posts/what-you-gona-lose-if-you-chose-react-over-angular/</loc>
-    <lastmod>2020-10-16T13:26:55.386Z</lastmod>
+    <lastmod>2020-10-16T15:58:56.000Z</lastmod>
   </url>
   
   
@@ -126,8 +132,10 @@
     
   
   
+    
+  
   <url>
     <loc>https://imm9o.github.io/</loc>
-    <lastmod>2020-10-16T13:32:56.580Z</lastmod>
+    <lastmod>2020-10-16T15:58:56.000Z</lastmod>
   </url>
 </urlset>
