@@ -2,8 +2,8 @@
   "version": "https://jsonfeed.org/version/1",
   "title": "IMM9O Blog",
   "home_page_url": "https://imm9o.github.io/",
-  "feed_url": "https://imm9o.github.io//feed/feed.json",
-  "description": "My personal &amp; My blog website",
+  "feed_url": "https://imm9o.github.io/feed/feed.json",
+  "description": "Voracious reader, blogger, and ambitious frontend engineer who is passionate about building large-scale apps with a focus on accessibility and performance 👨‍💻",
   "author": {
     "name": "Islam Muhammad.",
     "url": ""
