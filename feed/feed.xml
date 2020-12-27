@@ -18,13 +18,7 @@
 		<updated>2020-10-16T15:26:55.379+02:00</updated>
 		<id>https://imm9o.github.io/posts/web_components_with_angular/</id>
 		<content type="html">
-		  &lt;div class=&quot;banner&quot;&gt;
-  &lt;div class=&quot;m9-container&quot;&gt;
-      &lt;h1&gt;Web Components with angular&lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;m9-container post-content&quot;&gt;
-&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png&quot; alt=&quot;Create Stander Web Components using angular elements&quot;&gt;&lt;/p&gt;
+		  &lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png&quot; alt=&quot;Create Stander Web Components using angular elements&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Create Stander Web Components using angular elements&lt;/p&gt;
 &lt;p&gt;How to build web components using popular front-end framework angular.&lt;/p&gt;
 &lt;h2 id=&quot;before-we-start&quot;&gt;Before we start &lt;a class=&quot;direct-link&quot; href=&quot;#before-we-start&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -96,7 +90,7 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;need-more&quot;&gt;Need More &lt;a class=&quot;direct-link&quot; href=&quot;#need-more&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Here is a list of a good resources explain angular elements.&lt;/p&gt;
-&lt;/div&gt;
+
 			
 		</content>
 	</entry>
