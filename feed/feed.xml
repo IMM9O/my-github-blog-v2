@@ -5,7 +5,7 @@
 	
 	<link href="https://imm9o.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://imm9o.github.io/"/>
-	<updated>2020-10-16T15:26:55.386+02:00</updated>
+	<updated>2021-01-02T12:38:08.244+02:00</updated>
 	<id>https://imm9o.github.io/</id>
 	<author>
 		<name>Islam Muhammad.</name>
@@ -183,6 +183,40 @@ but it will become a pain in ahead once that component scale up leav
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion &lt;a class=&quot;direct-link&quot; href=&quot;#conclusion&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A lot of people are more interested in what they will lose, rather than what they will earn so that they will not regret the decision. It is like a trade-off you gonna win and lose there are no perfect solutions for all the problems either in life or in programming but after listing those features you can see the angular framework using regular html so most of solutions and features exist focus on reusability and not to break the web standers, on the other hand, react focus on keeping data in sync with ui.&lt;/p&gt;
 
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Rules of change detections in angular</title>
+		<link href="https://imm9o.github.io/posts/rules_of_change_detections_in_angular/"/>
+		<updated>2021-01-02T12:38:08.244+02:00</updated>
+		<id>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</id>
+		<content type="html">
+		  &lt;center&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1352&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;br&gt;
+&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@chesteralvarez?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Chester Alvarez&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gear?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;what-is-change-detection%3F&quot;&gt;What is change detection? &lt;a class=&quot;direct-link&quot; href=&quot;#what-is-change-detection%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Change detection is the mechanism designed to track changes in an application state and render the updated state on the screen. It ensures that the user interface always stays in sync with the internal state of the program.&lt;/p&gt;
+&lt;h2 id=&quot;how-change-detections-work-in-angular%3F&quot;&gt;How change detections work in angular? &lt;a class=&quot;direct-link&quot; href=&quot;#how-change-detections-work-in-angular%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Angular uses ZoneJS to intercept events that occurred in the application and run a change detection cycle automatically.&lt;/p&gt;
+&lt;p&gt;We can eliminate events that angular intercept by changing &lt;code&gt;ChangeDetectionStrategy&lt;/code&gt; in component decorator to &lt;code&gt;ChangeDetectionStrategy.OnPush&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ChangeDetectionStrategy.OnPush tells Angular that the component only depends on its @inputs() ( aka pure ) and needs to be checked only in the following cases:&lt;/p&gt;
+&lt;p&gt;1️⃣ The Input reference changes.&lt;br&gt;
+2️⃣ An event originated from the component or one of its children. ( The rule applies only to DOM events)&lt;br&gt;
+3️⃣ We run change detection explicitly.&lt;br&gt;
+4️⃣ Observable emits a new value inside the component template.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-optimize-running-of-change-detection&quot;&gt;How to optimize running of change detection &lt;a class=&quot;direct-link&quot; href=&quot;#how-to-optimize-running-of-change-detection&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Always use &lt;code&gt;OnPush&lt;/code&gt; Change Detection Strategy.&lt;/li&gt;
+&lt;li&gt;Always use &lt;a href=&quot;https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089&quot;&gt;immutable&lt;/a&gt; data because once you set component to &lt;code&gt;OnPush&lt;/code&gt; strategy angular will use shallow comparison to detect change and perform the reRender task.&lt;/li&gt;
+&lt;li&gt;Prevent unnecessary emits in observables inside component.&lt;/li&gt;
+&lt;li&gt;Prevent triggers unnecessary async task like scrolling using technics like &lt;a href=&quot;https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086&quot;&gt;Debounce&lt;/a&gt; or &lt;a href=&quot;https://levelup.gitconnected.com/throttle-in-javascript-improve-your-applications-performance-984a4e020a3f&quot;&gt;Throttle&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https://blog.bitsrc.io/angular-performance-web-workers-df382c4d3919&quot;&gt;Web Workers&lt;/a&gt; to perform some heavy calculation.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https://medium.com/@krzysztof.grzybek89/how-runoutsideangular-might-reduce-change-detection-calls-in-your-app-6b4dab6e374d&quot;&gt;runOutsideAngular&lt;/a&gt; when you starting a work consisting of one or more asynchronous tasks that don&#39;t require UI.&lt;/li&gt;
+&lt;/ul&gt;
 
 			
 		</content>
