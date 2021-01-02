@@ -196,8 +196,11 @@ but it will become a pain in ahead once that component scale up leav
 		<content type="html">
 		  &lt;center&gt;
 &lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1352&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;br&gt;
-&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@chesteralvarez?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Chester Alvarez&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gear?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@chesteralvarez?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Chester Alvarez&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gear?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/center&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What makes angular running change detection and how to optimize it&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&quot;what-is-change-detection%3F&quot;&gt;What is change detection? &lt;a class=&quot;direct-link&quot; href=&quot;#what-is-change-detection%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Change detection is the mechanism designed to track changes in an application state and render the updated state on the screen. It ensures that the user interface always stays in sync with the internal state of the program.&lt;/p&gt;
 &lt;h2 id=&quot;how-change-detections-work-in-angular%3F&quot;&gt;How change detections work in angular? &lt;a class=&quot;direct-link&quot; href=&quot;#how-change-detections-work-in-angular%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
