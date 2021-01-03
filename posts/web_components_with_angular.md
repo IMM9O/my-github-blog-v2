@@ -1,6 +1,7 @@
 ---
 title: 'Web Components with angular'
-description: How to extract your angular component into web component
+description: How to extract your angular component into stander web component
+image: https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png
 tags: ['angular', 'javascript']
 ---
 
@@ -109,3 +110,6 @@ It is a good practice to use standard web platform offers as we already know tha
 ## Need More
 
 Here is a list of a good resources explain angular elements.
+
+- [Angular Elements Quick Start](https://www.youtube.com/watch?v=4u9_kdkvTsc) - Fireship
+- [Advanced Angular Elements](https://www.youtube.com/watch?v=ujaMvl5M8nY) - Fireship
