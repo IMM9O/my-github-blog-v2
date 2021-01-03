@@ -90,6 +90,10 @@
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;need-more&quot;&gt;Need More &lt;a class=&quot;direct-link&quot; href=&quot;#need-more&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Here is a list of a good resources explain angular elements.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=4u9_kdkvTsc&quot;&gt;Angular Elements Quick Start&lt;/a&gt; - Fireship&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ujaMvl5M8nY&quot;&gt;Advanced Angular Elements&lt;/a&gt; - Fireship&lt;/li&gt;
+&lt;/ul&gt;
 
 			
 		</content>
@@ -204,8 +208,8 @@ but it will become a pain in ahead once that component scale up leav
 &lt;h2 id=&quot;what-is-change-detection%3F&quot;&gt;What is change detection? &lt;a class=&quot;direct-link&quot; href=&quot;#what-is-change-detection%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Change detection is the mechanism designed to track changes in an application state and render the updated state on the screen. It ensures that the user interface always stays in sync with the internal state of the program.&lt;/p&gt;
 &lt;h2 id=&quot;how-change-detections-work-in-angular%3F&quot;&gt;How change detections work in angular? &lt;a class=&quot;direct-link&quot; href=&quot;#how-change-detections-work-in-angular%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Angular uses ZoneJS to intercept events that occurred in the application and run a change detection cycle automatically.&lt;/p&gt;
-&lt;p&gt;We can eliminate events that angular intercept by changing &lt;code&gt;ChangeDetectionStrategy&lt;/code&gt; in component decorator to &lt;code&gt;ChangeDetectionStrategy.OnPush&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Angular uses &lt;a href=&quot;https://indepth.dev/posts/1059/do-you-still-think-that-ngzone-zone-js-is-required-for-change-detection-in-angular&quot;&gt;ZoneJS&lt;/a&gt; to intercept events that occurred in the application and run a change detection cycle automatically.&lt;/p&gt;
+&lt;p&gt;We can reduce events that angular intercept by changing &lt;code&gt;ChangeDetectionStrategy&lt;/code&gt; in component decorator to &lt;code&gt;ChangeDetectionStrategy.OnPush&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;ChangeDetectionStrategy.OnPush tells Angular that the component only depends on its @inputs() ( aka pure ) and needs to be checked only in the following cases:&lt;/p&gt;
 &lt;p&gt;1️⃣ The Input reference changes.&lt;br&gt;
 2️⃣ An event originated from the component or one of its children. ( The rule applies only to DOM events)&lt;br&gt;
@@ -214,11 +218,11 @@ but it will become a pain in ahead once that component scale up leav
 &lt;h2 id=&quot;how-to-optimize-running-of-change-detection&quot;&gt;How to optimize running of change detection &lt;a class=&quot;direct-link&quot; href=&quot;#how-to-optimize-running-of-change-detection&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Always use &lt;code&gt;OnPush&lt;/code&gt; Change Detection Strategy.&lt;/li&gt;
-&lt;li&gt;Always use &lt;a href=&quot;https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089&quot;&gt;immutable&lt;/a&gt; data because once you set component to &lt;code&gt;OnPush&lt;/code&gt; strategy angular will use shallow comparison to detect change and perform the reRender task.&lt;/li&gt;
+&lt;li&gt;Always use &lt;a href=&quot;https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089&quot;&gt;immutable&lt;/a&gt; data because once you set component to &lt;code&gt;OnPush&lt;/code&gt; strategy angular will use &lt;a href=&quot;https://javascript.info/object-copy&quot;&gt;shallow&lt;/a&gt; comparison to detect change and perform the reRender task.&lt;/li&gt;
 &lt;li&gt;Prevent unnecessary emits in observables inside component.&lt;/li&gt;
 &lt;li&gt;Prevent triggers unnecessary async task like scrolling using technics like &lt;a href=&quot;https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086&quot;&gt;Debounce&lt;/a&gt; or &lt;a href=&quot;https://levelup.gitconnected.com/throttle-in-javascript-improve-your-applications-performance-984a4e020a3f&quot;&gt;Throttle&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Use &lt;a href=&quot;https://blog.bitsrc.io/angular-performance-web-workers-df382c4d3919&quot;&gt;Web Workers&lt;/a&gt; to perform some heavy calculation.&lt;/li&gt;
-&lt;li&gt;Use &lt;a href=&quot;https://medium.com/@krzysztof.grzybek89/how-runoutsideangular-might-reduce-change-detection-calls-in-your-app-6b4dab6e374d&quot;&gt;runOutsideAngular&lt;/a&gt; when you starting a work consisting of one or more asynchronous tasks that don&#39;t require UI.&lt;/li&gt;
+&lt;li&gt;Reduce the amount of &lt;a href=&quot;https://web.dev/optimize-fid/&quot;&gt;long tasks&lt;/a&gt; by moving it to &lt;a href=&quot;https://blog.bitsrc.io/angular-performance-web-workers-df382c4d3919&quot;&gt;Web Workers&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https://medium.com/@krzysztof.grzybek89/how-runoutsideangular-might-reduce-change-detection-calls-in-your-app-6b4dab6e374d&quot;&gt;runOutsideAngular&lt;/a&gt; when starting a work consisting of one or more asynchronous tasks that don&#39;t require UI.&lt;/li&gt;
 &lt;/ul&gt;
 
 			
