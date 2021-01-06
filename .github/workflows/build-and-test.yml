@@ -29,5 +29,5 @@ jobs:
         npm run build
     - name: Deploy 🚀
       run: |
-        npm deploy
+        npm run deploy
 
