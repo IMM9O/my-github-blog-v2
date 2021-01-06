@@ -12,7 +12,7 @@
     "debug": "DEBUG=* eleventy && npm run test",
     "test": "mocha test/test*.js",
     "test-watch": "mocha test/test*.js --watch",
-    "deploy": "npm run build & gh-pages -d _site"
+    "deploy": "gh-pages -d _site"
   },
   "pre-push": [
     "build"
