@@ -107,6 +107,12 @@ header aside {
 #posts li {
   margin-bottom: 0.5em;
 }
+.social-section > a {
+  margin: 0 1rem;
+}
+.social-section img {
+  filter: invert(1);
+}
 
 /* https://github.com/rsms/inter/blob/master/LICENSE.txt
 
