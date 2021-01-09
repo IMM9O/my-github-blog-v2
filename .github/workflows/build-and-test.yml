@@ -23,7 +23,4 @@ jobs:
       run: |
         npm ci
         npm run build
-    - name: Deploy 🚀
-      run: |
-        npm run deploy
 
