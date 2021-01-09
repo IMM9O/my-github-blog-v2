@@ -5,7 +5,7 @@
 	
 	<link href="https://imm9o.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://imm9o.github.io/"/>
-	<updated>2021-01-02T12:38:08.244+02:00</updated>
+	<updated>2021-01-07T16:41:49.178+02:00</updated>
 	<id>https://imm9o.github.io/</id>
 	<author>
 		<name>Islam Muhammad.</name>
@@ -224,6 +224,47 @@ but it will become a pain in ahead once that component scale up leav
 &lt;li&gt;Reduce the amount of &lt;a href=&quot;https://web.dev/optimize-fid/&quot;&gt;long tasks&lt;/a&gt; by moving it to &lt;a href=&quot;https://blog.bitsrc.io/angular-performance-web-workers-df382c4d3919&quot;&gt;Web Workers&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Use &lt;a href=&quot;https://medium.com/@krzysztof.grzybek89/how-runoutsideangular-might-reduce-change-detection-calls-in-your-app-6b4dab6e374d&quot;&gt;runOutsideAngular&lt;/a&gt; when starting a work consisting of one or more asynchronous tasks that don&#39;t require UI.&lt;/li&gt;
 &lt;/ul&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>A little trick for your productivity</title>
+		<link href="https://imm9o.github.io/posts/how_to_speed_up_your_workflow/"/>
+		<updated>2021-01-07T16:41:49.178+02:00</updated>
+		<id>https://imm9o.github.io/posts/how_to_speed_up_your_workflow/</id>
+		<content type="html">
+		  &lt;center&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1508175911810-a4817cd3d7b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1951&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@baudy?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Tim Carey&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/speed?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;shortcuts-your-commands&quot;&gt;Shortcuts your commands &lt;a class=&quot;direct-link&quot; href=&quot;#shortcuts-your-commands&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you use bash (and you should use it?) you can customize and add commands that you are using a lot in your daily workflow instated of writing it over and over by simply type the alias for your command.&lt;/p&gt;
+&lt;p&gt;To activate it very easy, just follow the instruction&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;code&gt;.bashrc&lt;/code&gt; file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# if you are using vs code or open it with any editor you like&lt;/span&gt;&lt;br&gt;code ~/.bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Add your alias at the end of file&lt;br&gt;
+And here are some examples you can use it&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;lgnpm&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;npm list -g --depth=0&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# list all globally installed package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;lgu&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git config --list --local | grep user.*&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# list user name and email associative with current repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# git commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gf&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git fetch origin&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git clone&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gs&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git status&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git pull&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gp&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git push&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git commit -d&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# and you know the rest&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;filter-your-mails-(works-with-gmail-only)&quot;&gt;Filter your mails (works with Gmail only) &lt;a class=&quot;direct-link&quot; href=&quot;#filter-your-mails-(works-with-gmail-only)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;When you register for a website for the first time you can change your email address by simply adding plus sign before &lt;code&gt;@&lt;/code&gt; symbol.&lt;/p&gt;
+&lt;p&gt;For example, whenever you sign up for a newsletter, you could use &lt;a href=&quot;mailto:mygmail+newsletters@gmail.com&quot;&gt;mygmail+newsletters@gmail.com&lt;/a&gt;. Gmail will not look at what comes after the plus sign in the address so that the emails will come straight your inbox. However, you will still see those messages addressed with the +newsletters part, making them easy to spot &amp;amp; filter.&lt;/p&gt;
+&lt;p&gt;Using the same newsletters example, you can filter emails you get with mygmail+newsletters. Have them move to a specific folder, be flagged, or marked as read.&lt;/p&gt;
+&lt;center&gt;
+&lt;figure class=&quot;image&quot;&gt;
+  &lt;img src=&quot;https://imm9o.github.io/img/gmail-trick-1.png&quot; alt=&quot;gmail filter step 1&quot;&gt;
+  &lt;figcaption&gt;Gmail filter step 1&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;image&quot;&gt;
+  &lt;img src=&quot;https://imm9o.github.io/img/gmail-trick-2.png&quot; alt=&quot;gmail filter step 2&quot;&gt;
+  &lt;figcaption&gt;Gmail filter step 2&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/center&gt;
 
 			
 		</content>

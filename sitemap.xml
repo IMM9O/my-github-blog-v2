@@ -13,7 +13,7 @@
   
   <url>
     <loc>https://imm9o.github.io/about/</loc>
-    <lastmod>2020-12-27T10:19:17.000Z</lastmod>
+    <lastmod>2021-01-03T07:43:29.000Z</lastmod>
   </url>
   
   
@@ -53,6 +53,32 @@
   <url>
     <loc>https://imm9o.github.io/tags/</loc>
     <lastmod>2020-10-16T12:58:04.751Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://imm9o.github.io/tags/tips/</loc>
+    <lastmod>2020-10-16T12:58:04.752Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://imm9o.github.io/tags/cmd/</loc>
+    <lastmod>2020-10-16T12:58:04.752Z</lastmod>
   </url>
   
   
@@ -106,7 +132,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/web_components_with_angular/</loc>
-    <lastmod>2020-12-27T10:19:17.000Z</lastmod>
+    <lastmod>2021-01-03T07:43:29.000Z</lastmod>
   </url>
   
   
@@ -121,7 +147,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/what-you-gona-lose-if-you-chose-react-over-angular/</loc>
-    <lastmod>2020-10-16T15:58:56.000Z</lastmod>
+    <lastmod>2021-01-03T07:43:29.000Z</lastmod>
   </url>
   
   
@@ -131,10 +157,27 @@
   
     
   
+  
+    
   
   <url>
     <loc>https://imm9o.github.io/</loc>
-    <lastmod>2020-12-27T11:04:36.268Z</lastmod>
+    <lastmod>2021-01-03T07:43:29.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  <url>
+    <loc>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</loc>
+    <lastmod>2021-01-03T07:43:29.000Z</lastmod>
   </url>
   
   
@@ -146,7 +189,7 @@
   
   
   <url>
-    <loc>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</loc>
-    <lastmod>2021-01-02T10:38:08.244Z</lastmod>
+    <loc>https://imm9o.github.io/posts/how_to_speed_up_your_workflow/</loc>
+    <lastmod>2021-01-07T14:41:49.178Z</lastmod>
   </url>
 </urlset>
