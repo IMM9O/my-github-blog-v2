@@ -4,7 +4,7 @@ const { JSDOM } = require("jsdom");
 const fetch = require("node-fetch");
 const sh = require("shorthash");
 const fileType = require("file-type");
-const metadata = require("../../_data/metadata.json");
+const metadata = require("../_data/metadata.json");
 
 let config = { distPath: "_site", verbose: false, attribute: "src" };
 
