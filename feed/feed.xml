@@ -5,7 +5,7 @@
 	
 	<link href="https://imm9o.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://imm9o.github.io/"/>
-	<updated>2021-01-23T12:12:36.934-00:00</updated>
+	<updated>2021-01-18T09:04:08.211+02:00</updated>
 	<id>https://imm9o.github.io/</id>
 	<author>
 		<name>Islam Muhammad.</name>
@@ -13,140 +13,9 @@
 	</author>
 	
 	<entry>
-		<title>Add Multiple ssh keys in one machine</title>
-		<link href="https://imm9o.github.io/posts/add_one_or_more_ssh_keys_in_one_machine/"/>
-		<updated>2021-01-23T12:12:36.934-00:00</updated>
-		<id>https://imm9o.github.io/posts/add_one_or_more_ssh_keys_in_one_machine/</id>
-		<content type="html">
-		  &lt;center&gt;
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1464062198447-e6e5c40c43c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1394&amp;amp;q=80&quot; alt=&quot;railway&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;&lt;small&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@thesollers?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Anton Darius&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/railway?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/center&gt;
-&lt;p&gt;In this post i will explain how to add one or more ssh keys in one machine, use one for personal use and the others for work. I will explain it for gihub but the steps can be applicable for any git providers.&lt;/p&gt;
-&lt;p&gt;Before we start you have to install git first.&lt;/p&gt;
-&lt;h4 id=&quot;view-exist-ssh-keys&quot;&gt;View exist ssh keys &lt;a class=&quot;direct-link&quot; href=&quot;#view-exist-ssh-keys&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; -al ~/.ssh&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;generate-new-ssh-key&quot;&gt;Generate new ssh key &lt;a class=&quot;direct-link&quot; href=&quot;#generate-new-ssh-key&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;After running this command it will generate two file public/private keys&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;br&gt;$ ssh-keygen -t rsa -f &lt;span class=&quot;token string&quot;&gt;&quot;id_rsa_personal_github&quot;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;# for personal account&lt;/span&gt;&lt;br&gt;$ ssh-keygen -t rsa -f &lt;span class=&quot;token string&quot;&gt;&quot;id_rsa_work_github&quot;&lt;/span&gt;         &lt;span class=&quot;token comment&quot;&gt;# for work account&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;adding-the-new-ssh-key-to-the-corresponding-(github%2C-bitbuckt-or-gitlab)-account&quot;&gt;Adding the new SSH key to the corresponding (GitHub, Bitbuckt or Gitlab) account &lt;a class=&quot;direct-link&quot; href=&quot;#adding-the-new-ssh-key-to-the-corresponding-(github%2C-bitbuckt-or-gitlab)-account&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Copy generated key(s) to clipboard&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ clip &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; ~/.ssh/id_rsa_personal_github.pub          &lt;span class=&quot;token comment&quot;&gt;# for github account&lt;/span&gt;&lt;br&gt;$ clip &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; ~/.ssh/id_rsa_work_github.pub               &lt;span class=&quot;token comment&quot;&gt;# for gitlab account&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;Add clipboard to github accounts:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;Go to Settings&lt;/li&gt;
-&lt;li&gt;Select SSH and GPG keys from the menu to the left.&lt;/li&gt;
-&lt;li&gt;Click on New SSH key, provide a suitable title, and paste the key in the box below&lt;/li&gt;
-&lt;li&gt;Click Add key — and you’re done!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&quot;registering-the-new-ssh-keys-with-the-ssh-agent&quot;&gt;Registering the new SSH Keys with the ssh-agent &lt;a class=&quot;direct-link&quot; href=&quot;#registering-the-new-ssh-keys-with-the-ssh-agent&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# start the ssh-agent in the background&lt;/span&gt;&lt;br&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;Agent pid &lt;span class=&quot;token number&quot;&gt;59566&lt;/span&gt;&lt;br&gt;&lt;br&gt;$ ssh-add ~/.ssh/id_rsa_personal_github    &lt;span class=&quot;token comment&quot;&gt;# for personal account&lt;/span&gt;&lt;br&gt;$ ssh-add ~/.ssh/id_rsa_work_github        &lt;span class=&quot;token comment&quot;&gt;# for work account&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;creating-the-ssh-config-file&quot;&gt;Creating the SSH config file &lt;a class=&quot;direct-link&quot; href=&quot;#creating-the-ssh-config-file&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;Using this file to tell git installed on your machine what key to use when pushing to upstream.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/.ssh/&lt;br&gt;$ &lt;span class=&quot;token function&quot;&gt;touch&lt;/span&gt; config           &lt;span class=&quot;token comment&quot;&gt;# Create the file if not exists&lt;/span&gt;&lt;br&gt;$ code config            &lt;span class=&quot;token comment&quot;&gt;# Open the file in VS code or use any editor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;config file&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;# Personal GitHub Account&lt;br&gt;Host github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;br&gt;   HostName github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;br&gt;   User git&lt;br&gt;   IdentityFile &lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ssh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;id_rsa_personal_github&lt;br&gt;# Work GitLab Account&lt;br&gt;Host gitLab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com    &lt;br&gt;   HostName gitLab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com &lt;br&gt;   User git&lt;br&gt;   IdentityFile &lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ssh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;id_rsa_work_github&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&quot;resources&quot;&gt;Resources &lt;a class=&quot;direct-link&quot; href=&quot;#resources&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent&quot;&gt;Setup SSH Key - GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/&quot;&gt;Setup SSH Key - bitbucket&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.gitlab.com/ee/ssh/&quot;&gt;Setup SSH Key - Gitlab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hQWRp-FdTpc&quot;&gt;SSH Crash Course&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SWYqp7iY_Tc&quot;&gt;Git &amp;amp; GitHub Crash Course For Beginners&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>A little trick for your productivity</title>
-		<link href="https://imm9o.github.io/posts/how_to_speed_up_your_workflow/"/>
-		<updated>2021-01-23T12:12:36.934-00:00</updated>
-		<id>https://imm9o.github.io/posts/how_to_speed_up_your_workflow/</id>
-		<content type="html">
-		  &lt;center&gt;
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1508175911810-a4817cd3d7b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1951&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@baudy?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Tim Carey&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/speed?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/center&gt;
-&lt;h2 id=&quot;shortcuts-your-commands&quot;&gt;Shortcuts your commands &lt;a class=&quot;direct-link&quot; href=&quot;#shortcuts-your-commands&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;If you use bash (and you should use it?) you can customize and add commands that you are using a lot in your daily workflow instated of writing it over and over by simply type the alias for your command.&lt;/p&gt;
-&lt;p&gt;To activate it very easy, just follow the instruction&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Open &lt;code&gt;.bashrc&lt;/code&gt; file&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# if you are using vs code or open it with any editor you like&lt;/span&gt;&lt;br&gt;code ~/.bashrc&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;Add your alias at the end of file&lt;br&gt;
-And here are some examples you can use it&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;lgnpm&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;npm list -g --depth=0&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# list all globally installed package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;lgu&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git config --list --local | grep user.*&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# list user name and email associative with current repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# git commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gf&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git fetch origin&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git clone&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gs&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git status&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git pull&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gp&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git push&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git commit -d&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# and you know the rest&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;filter-your-mails-(works-with-gmail-only)&quot;&gt;Filter your mails (works with Gmail only) &lt;a class=&quot;direct-link&quot; href=&quot;#filter-your-mails-(works-with-gmail-only)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;When you register for a website for the first time you can change your email address by simply adding plus sign before &lt;code&gt;@&lt;/code&gt; symbol.&lt;/p&gt;
-&lt;p&gt;For example, whenever you sign up for a newsletter, you could use &lt;a href=&quot;mailto:mygmail+newsletters@gmail.com&quot;&gt;mygmail+newsletters@gmail.com&lt;/a&gt;. Gmail will not look at what comes after the plus sign in the address so that the emails will come straight your inbox. However, you will still see those messages addressed with the +newsletters part, making them easy to spot &amp;amp; filter.&lt;/p&gt;
-&lt;p&gt;Using the same newsletters example, you can filter emails you get with mygmail+newsletters. Have them move to a specific folder, be flagged, or marked as read.&lt;/p&gt;
-&lt;center&gt;
-&lt;figure class=&quot;image&quot;&gt;
-  &lt;img src=&quot;https://imm9o.github.io/img/gmail-trick-1.png&quot; alt=&quot;gmail filter step 1&quot;&gt;
-  &lt;figcaption&gt;Gmail filter step 1&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure class=&quot;image&quot;&gt;
-  &lt;img src=&quot;https://imm9o.github.io/img/gmail-trick-2.png&quot; alt=&quot;gmail filter step 2&quot;&gt;
-  &lt;figcaption&gt;Gmail filter step 2&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/center&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Rules of change detections in angular</title>
-		<link href="https://imm9o.github.io/posts/rules_of_change_detections_in_angular/"/>
-		<updated>2021-01-23T12:12:36.934-00:00</updated>
-		<id>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</id>
-		<content type="html">
-		  &lt;center&gt;
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1352&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;br&gt;
-&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@chesteralvarez?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Chester Alvarez&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gear?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/center&gt;
-&lt;blockquote&gt;
-&lt;p&gt;What makes angular running change detection and how to optimize it&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;what-is-change-detection%3F&quot;&gt;What is change detection? &lt;a class=&quot;direct-link&quot; href=&quot;#what-is-change-detection%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Change detection is the mechanism designed to track changes in an application state and render the updated state on the screen. It ensures that the user interface always stays in sync with the internal state of the program.&lt;/p&gt;
-&lt;h2 id=&quot;how-change-detections-work-in-angular%3F&quot;&gt;How change detections work in angular? &lt;a class=&quot;direct-link&quot; href=&quot;#how-change-detections-work-in-angular%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Angular uses &lt;a href=&quot;https://indepth.dev/posts/1059/do-you-still-think-that-ngzone-zone-js-is-required-for-change-detection-in-angular&quot;&gt;ZoneJS&lt;/a&gt; to intercept events that occurred in the application and run a change detection cycle automatically.&lt;/p&gt;
-&lt;p&gt;We can reduce events that angular intercept by changing &lt;code&gt;ChangeDetectionStrategy&lt;/code&gt; in component decorator to &lt;code&gt;ChangeDetectionStrategy.OnPush&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ChangeDetectionStrategy.OnPush tells Angular that the component only depends on its @inputs() ( aka pure ) and needs to be checked only in the following cases:&lt;/p&gt;
-&lt;p&gt;1️⃣ The Input reference changes.&lt;br&gt;
-2️⃣ An event originated from the component or one of its children. ( The rule applies only to DOM events)&lt;br&gt;
-3️⃣ We run change detection explicitly.&lt;br&gt;
-4️⃣ Observable emits a new value inside the component template.&lt;/p&gt;
-&lt;h2 id=&quot;how-to-optimize-running-of-change-detection&quot;&gt;How to optimize running of change detection &lt;a class=&quot;direct-link&quot; href=&quot;#how-to-optimize-running-of-change-detection&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Always use &lt;code&gt;OnPush&lt;/code&gt; Change Detection Strategy.&lt;/li&gt;
-&lt;li&gt;Always use &lt;a href=&quot;https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089&quot;&gt;immutable&lt;/a&gt; data because once you set component to &lt;code&gt;OnPush&lt;/code&gt; strategy angular will use &lt;a href=&quot;https://javascript.info/object-copy&quot;&gt;shallow&lt;/a&gt; comparison to detect change and perform the reRender task.&lt;/li&gt;
-&lt;li&gt;Prevent unnecessary emits in observables inside component.&lt;/li&gt;
-&lt;li&gt;Prevent triggers unnecessary async task like scrolling using technics like &lt;a href=&quot;https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086&quot;&gt;Debounce&lt;/a&gt; or &lt;a href=&quot;https://levelup.gitconnected.com/throttle-in-javascript-improve-your-applications-performance-984a4e020a3f&quot;&gt;Throttle&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Reduce the amount of &lt;a href=&quot;https://web.dev/optimize-fid/&quot;&gt;long tasks&lt;/a&gt; by moving it to &lt;a href=&quot;https://blog.bitsrc.io/angular-performance-web-workers-df382c4d3919&quot;&gt;Web Workers&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Use &lt;a href=&quot;https://medium.com/@krzysztof.grzybek89/how-runoutsideangular-might-reduce-change-detection-calls-in-your-app-6b4dab6e374d&quot;&gt;runOutsideAngular&lt;/a&gt; when starting a work consisting of one or more asynchronous tasks that don&#39;t require UI.&lt;/li&gt;
-&lt;/ul&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>Web Components with angular</title>
 		<link href="https://imm9o.github.io/posts/web_components_with_angular/"/>
-		<updated>2021-01-23T12:12:36.934-00:00</updated>
+		<updated>2020-10-16T15:26:55.379+02:00</updated>
 		<id>https://imm9o.github.io/posts/web_components_with_angular/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png&quot; alt=&quot;Create Stander Web Components using angular elements&quot;&gt;&lt;/p&gt;
@@ -233,7 +102,7 @@ And here are some examples you can use it&lt;/li&gt;
 	<entry>
 		<title>What you gonna lose if you choose react over angular</title>
 		<link href="https://imm9o.github.io/posts/what-you-gona-lose-if-you-chose-react-over-angular/"/>
-		<updated>2021-01-23T12:12:36.934-00:00</updated>
+		<updated>2020-10-16T15:26:55.386+02:00</updated>
 		<id>https://imm9o.github.io/posts/what-you-gona-lose-if-you-chose-react-over-angular/</id>
 		<content type="html">
 		  &lt;blockquote&gt;
@@ -318,6 +187,137 @@ but it will become a pain in ahead once that component scale up leav
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion &lt;a class=&quot;direct-link&quot; href=&quot;#conclusion&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A lot of people are more interested in what they will lose, rather than what they will earn so that they will not regret the decision. It is like a trade-off you gonna win and lose there are no perfect solutions for all the problems either in life or in programming but after listing those features you can see the angular framework using regular html so most of solutions and features exist focus on reusability and not to break the web standers, on the other hand, react focus on keeping data in sync with ui.&lt;/p&gt;
 
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Rules of change detections in angular</title>
+		<link href="https://imm9o.github.io/posts/rules_of_change_detections_in_angular/"/>
+		<updated>2021-01-02T12:38:08.244+02:00</updated>
+		<id>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</id>
+		<content type="html">
+		  &lt;center&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1352&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;br&gt;
+&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@chesteralvarez?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Chester Alvarez&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gear?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What makes angular running change detection and how to optimize it&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;what-is-change-detection%3F&quot;&gt;What is change detection? &lt;a class=&quot;direct-link&quot; href=&quot;#what-is-change-detection%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Change detection is the mechanism designed to track changes in an application state and render the updated state on the screen. It ensures that the user interface always stays in sync with the internal state of the program.&lt;/p&gt;
+&lt;h2 id=&quot;how-change-detections-work-in-angular%3F&quot;&gt;How change detections work in angular? &lt;a class=&quot;direct-link&quot; href=&quot;#how-change-detections-work-in-angular%3F&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Angular uses &lt;a href=&quot;https://indepth.dev/posts/1059/do-you-still-think-that-ngzone-zone-js-is-required-for-change-detection-in-angular&quot;&gt;ZoneJS&lt;/a&gt; to intercept events that occurred in the application and run a change detection cycle automatically.&lt;/p&gt;
+&lt;p&gt;We can reduce events that angular intercept by changing &lt;code&gt;ChangeDetectionStrategy&lt;/code&gt; in component decorator to &lt;code&gt;ChangeDetectionStrategy.OnPush&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ChangeDetectionStrategy.OnPush tells Angular that the component only depends on its @inputs() ( aka pure ) and needs to be checked only in the following cases:&lt;/p&gt;
+&lt;p&gt;1️⃣ The Input reference changes.&lt;br&gt;
+2️⃣ An event originated from the component or one of its children. ( The rule applies only to DOM events)&lt;br&gt;
+3️⃣ We run change detection explicitly.&lt;br&gt;
+4️⃣ Observable emits a new value inside the component template.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-optimize-running-of-change-detection&quot;&gt;How to optimize running of change detection &lt;a class=&quot;direct-link&quot; href=&quot;#how-to-optimize-running-of-change-detection&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Always use &lt;code&gt;OnPush&lt;/code&gt; Change Detection Strategy.&lt;/li&gt;
+&lt;li&gt;Always use &lt;a href=&quot;https://medium.com/javascript-in-plain-english/how-to-deep-copy-objects-and-arrays-in-javascript-7c911359b089&quot;&gt;immutable&lt;/a&gt; data because once you set component to &lt;code&gt;OnPush&lt;/code&gt; strategy angular will use &lt;a href=&quot;https://javascript.info/object-copy&quot;&gt;shallow&lt;/a&gt; comparison to detect change and perform the reRender task.&lt;/li&gt;
+&lt;li&gt;Prevent unnecessary emits in observables inside component.&lt;/li&gt;
+&lt;li&gt;Prevent triggers unnecessary async task like scrolling using technics like &lt;a href=&quot;https://levelup.gitconnected.com/debounce-in-javascript-improve-your-applications-performance-5b01855e086&quot;&gt;Debounce&lt;/a&gt; or &lt;a href=&quot;https://levelup.gitconnected.com/throttle-in-javascript-improve-your-applications-performance-984a4e020a3f&quot;&gt;Throttle&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Reduce the amount of &lt;a href=&quot;https://web.dev/optimize-fid/&quot;&gt;long tasks&lt;/a&gt; by moving it to &lt;a href=&quot;https://blog.bitsrc.io/angular-performance-web-workers-df382c4d3919&quot;&gt;Web Workers&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https://medium.com/@krzysztof.grzybek89/how-runoutsideangular-might-reduce-change-detection-calls-in-your-app-6b4dab6e374d&quot;&gt;runOutsideAngular&lt;/a&gt; when starting a work consisting of one or more asynchronous tasks that don&#39;t require UI.&lt;/li&gt;
+&lt;/ul&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>A little trick for your productivity</title>
+		<link href="https://imm9o.github.io/posts/how_to_speed_up_your_workflow/"/>
+		<updated>2021-01-07T16:41:49.178+02:00</updated>
+		<id>https://imm9o.github.io/posts/how_to_speed_up_your_workflow/</id>
+		<content type="html">
+		  &lt;center&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1508175911810-a4817cd3d7b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1951&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@baudy?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Tim Carey&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/speed?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;h2 id=&quot;shortcuts-your-commands&quot;&gt;Shortcuts your commands &lt;a class=&quot;direct-link&quot; href=&quot;#shortcuts-your-commands&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;If you use bash (and you should use it?) you can customize and add commands that you are using a lot in your daily workflow instated of writing it over and over by simply type the alias for your command.&lt;/p&gt;
+&lt;p&gt;To activate it very easy, just follow the instruction&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open &lt;code&gt;.bashrc&lt;/code&gt; file&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# if you are using vs code or open it with any editor you like&lt;/span&gt;&lt;br&gt;code ~/.bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Add your alias at the end of file&lt;br&gt;
+And here are some examples you can use it&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;lgnpm&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;npm list -g --depth=0&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# list all globally installed package&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;lgu&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git config --list --local | grep user.*&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;# list user name and email associative with current repo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# git commands&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gf&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git fetch origin&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git clone&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gs&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git status&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gl&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git pull&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gp&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git push&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;alias&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;gc&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;git commit -d&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token comment&quot;&gt;# and you know the rest&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;filter-your-mails-(works-with-gmail-only)&quot;&gt;Filter your mails (works with Gmail only) &lt;a class=&quot;direct-link&quot; href=&quot;#filter-your-mails-(works-with-gmail-only)&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;When you register for a website for the first time you can change your email address by simply adding plus sign before &lt;code&gt;@&lt;/code&gt; symbol.&lt;/p&gt;
+&lt;p&gt;For example, whenever you sign up for a newsletter, you could use &lt;a href=&quot;mailto:mygmail+newsletters@gmail.com&quot;&gt;mygmail+newsletters@gmail.com&lt;/a&gt;. Gmail will not look at what comes after the plus sign in the address so that the emails will come straight your inbox. However, you will still see those messages addressed with the +newsletters part, making them easy to spot &amp;amp; filter.&lt;/p&gt;
+&lt;p&gt;Using the same newsletters example, you can filter emails you get with mygmail+newsletters. Have them move to a specific folder, be flagged, or marked as read.&lt;/p&gt;
+&lt;center&gt;
+&lt;figure class=&quot;image&quot;&gt;
+  &lt;img src=&quot;https://imm9o.github.io/img/gmail-trick-1.png&quot; alt=&quot;gmail filter step 1&quot;&gt;
+  &lt;figcaption&gt;Gmail filter step 1&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure class=&quot;image&quot;&gt;
+  &lt;img src=&quot;https://imm9o.github.io/img/gmail-trick-2.png&quot; alt=&quot;gmail filter step 2&quot;&gt;
+  &lt;figcaption&gt;Gmail filter step 2&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/center&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Add Multiple ssh keys in one machine</title>
+		<link href="https://imm9o.github.io/posts/add_one_or_more_ssh_keys_in_one_machine/"/>
+		<updated>2021-01-18T09:04:08.211+02:00</updated>
+		<id>https://imm9o.github.io/posts/add_one_or_more_ssh_keys_in_one_machine/</id>
+		<content type="html">
+		  &lt;center&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1464062198447-e6e5c40c43c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1394&amp;amp;q=80&quot; alt=&quot;railway&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;small&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@thesollers?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Anton Darius&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/railway?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;p&gt;In this post i will explain how to add one or more ssh keys in one machine, use one for personal use and the others for work. I will explain it for gihub but the steps can be applicable for any git providers.&lt;/p&gt;
+&lt;p&gt;Before we start you have to install git first.&lt;/p&gt;
+&lt;h4 id=&quot;view-exist-ssh-keys&quot;&gt;View exist ssh keys &lt;a class=&quot;direct-link&quot; href=&quot;#view-exist-ssh-keys&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; -al ~/.ssh&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;generate-new-ssh-key&quot;&gt;Generate new ssh key &lt;a class=&quot;direct-link&quot; href=&quot;#generate-new-ssh-key&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;After running this command it will generate two file public/private keys&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;br&gt;$ ssh-keygen -t rsa -f &lt;span class=&quot;token string&quot;&gt;&quot;id_rsa_personal_github&quot;&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;# for personal account&lt;/span&gt;&lt;br&gt;$ ssh-keygen -t rsa -f &lt;span class=&quot;token string&quot;&gt;&quot;id_rsa_work_github&quot;&lt;/span&gt;         &lt;span class=&quot;token comment&quot;&gt;# for work account&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;adding-the-new-ssh-key-to-the-corresponding-(github%2C-bitbuckt-or-gitlab)-account&quot;&gt;Adding the new SSH key to the corresponding (GitHub, Bitbuckt or Gitlab) account &lt;a class=&quot;direct-link&quot; href=&quot;#adding-the-new-ssh-key-to-the-corresponding-(github%2C-bitbuckt-or-gitlab)-account&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Copy generated key(s) to clipboard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ clip &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; ~/.ssh/id_rsa_personal_github.pub          &lt;span class=&quot;token comment&quot;&gt;# for github account&lt;/span&gt;&lt;br&gt;$ clip &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; ~/.ssh/id_rsa_work_github.pub               &lt;span class=&quot;token comment&quot;&gt;# for gitlab account&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Add clipboard to github accounts:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to Settings&lt;/li&gt;
+&lt;li&gt;Select SSH and GPG keys from the menu to the left.&lt;/li&gt;
+&lt;li&gt;Click on New SSH key, provide a suitable title, and paste the key in the box below&lt;/li&gt;
+&lt;li&gt;Click Add key — and you’re done!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&quot;registering-the-new-ssh-keys-with-the-ssh-agent&quot;&gt;Registering the new SSH Keys with the ssh-agent &lt;a class=&quot;direct-link&quot; href=&quot;#registering-the-new-ssh-keys-with-the-ssh-agent&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# start the ssh-agent in the background&lt;/span&gt;&lt;br&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;eval&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;Agent pid &lt;span class=&quot;token number&quot;&gt;59566&lt;/span&gt;&lt;br&gt;&lt;br&gt;$ ssh-add ~/.ssh/id_rsa_personal_github    &lt;span class=&quot;token comment&quot;&gt;# for personal account&lt;/span&gt;&lt;br&gt;$ ssh-add ~/.ssh/id_rsa_work_github        &lt;span class=&quot;token comment&quot;&gt;# for work account&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;creating-the-ssh-config-file&quot;&gt;Creating the SSH config file &lt;a class=&quot;direct-link&quot; href=&quot;#creating-the-ssh-config-file&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Using this file to tell git installed on your machine what key to use when pushing to upstream.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; ~/.ssh/&lt;br&gt;$ &lt;span class=&quot;token function&quot;&gt;touch&lt;/span&gt; config           &lt;span class=&quot;token comment&quot;&gt;# Create the file if not exists&lt;/span&gt;&lt;br&gt;$ code config            &lt;span class=&quot;token comment&quot;&gt;# Open the file in VS code or use any editor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;config file&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;# Personal GitHub Account&lt;br&gt;Host github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;br&gt;   HostName github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com&lt;br&gt;   User git&lt;br&gt;   IdentityFile &lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ssh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;id_rsa_personal_github&lt;br&gt;# Work GitLab Account&lt;br&gt;Host gitLab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com    &lt;br&gt;   HostName gitLab&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;com &lt;br&gt;   User git&lt;br&gt;   IdentityFile &lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ssh&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;id_rsa_work_github&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;resources&quot;&gt;Resources &lt;a class=&quot;direct-link&quot; href=&quot;#resources&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent&quot;&gt;Setup SSH Key - GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://support.atlassian.com/bitbucket-cloud/docs/set-up-an-ssh-key/&quot;&gt;Setup SSH Key - bitbucket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.gitlab.com/ee/ssh/&quot;&gt;Setup SSH Key - Gitlab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hQWRp-FdTpc&quot;&gt;SSH Crash Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SWYqp7iY_Tc&quot;&gt;Git &amp;amp; GitHub Crash Course For Beginners&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 			
 		</content>
