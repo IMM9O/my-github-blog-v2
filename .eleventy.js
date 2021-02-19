@@ -40,20 +40,23 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+// Remote plugins
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginNavigation = require("@11ty/eleventy-navigation");
+const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const { DateTime } = require("luxon");
 const { promisify } = require("util");
 const fs = require("fs");
-const hasha = require("hasha");
 const readFile = promisify(fs.readFile);
 const stat = promisify(fs.stat);
 const execFile = promisify(require("child_process").execFile);
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginNavigation = require("@11ty/eleventy-navigation");
+const hasha = require("hasha");
+const CleanCSS = require("clean-css");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+
+// Local plugins
 const localImages = require("./_11ty/remote-images");
-const CleanCSS = require("clean-css");
 const GA_ID = require("./src/_data/metadata.json").googleAnalyticsId;
 
 module.exports = function (eleventyConfig) {
@@ -127,6 +130,7 @@ module.exports = function (eleventyConfig) {
     call(promise);
   });
 
+  /** Filters: Various template engines can be extended with custom filters to modify content */
   eleventyConfig.addFilter("encodeURIComponent", function (str) {
     return encodeURIComponent(str);
   });
@@ -162,6 +166,7 @@ module.exports = function (eleventyConfig) {
 
     return array.slice(0, n);
   });
+  /*******************************************************************************************/
 
   eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
 
