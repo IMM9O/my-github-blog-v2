@@ -4,7 +4,7 @@
   "domain": "imm9o.github.io/",
   "description": "Voracious reader, blogger, and ambitious frontend engineer who is passionate about building large-scale apps with a focus on accessibility and performance 👨‍💻",
   "genre": "Insert a schema.org genre",
-  "googleAnalyticsId": "GA ID. Update me",
+  "googleAnalyticsId": "",
   "feed": {
     "subtitle": "Subtitle. Update me.",
     "filename": "feed.xml",
@@ -16,7 +16,7 @@
     "url": "https://imm9o.github.io/feed/feed.json"
   },
   "author": {
-    "name": "Islam Muhammad.",
+    "name": "Islam Muhammad",
     "twitterHandle": "imm9oo"
   },
   "publisher": {
