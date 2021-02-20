@@ -3,6 +3,7 @@ title: 'A little trick for your productivity'
 description: 'Make your life easier with this tricks'
 image: https://images.unsplash.com/photo-1508175911810-a4817cd3d7b4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80
 tags: ['tips', 'cmd']
+date: 2021-01-14
 ---
 
 <center>

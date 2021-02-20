@@ -3,6 +3,7 @@ title: 'What you gonna lose if you choose react over angular'
 description: List of stand alone features that makes angular framework distinguish from other frameworks.
 image: https://images.unsplash.com/photo-1581574919402-5b7d733224d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
 tags: ['angular', 'react', 'javascript']
+date: 2020-06-01
 ---
 
 > List of stand alone features that makes angular framework distinguish from other frameworks.

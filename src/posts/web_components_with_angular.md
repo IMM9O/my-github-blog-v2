@@ -3,6 +3,7 @@ title: 'Web Components with angular'
 description: How to extract your angular component into stander web component
 image: https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png
 tags: ['angular', 'javascript']
+date: 2020-06-01
 ---
 
 ![Create Stander Web Components using angular elements](https://miro.medium.com/max/700/1*6-mRwWdL2vc3nY0kskFr3g.png)

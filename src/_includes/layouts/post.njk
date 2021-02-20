@@ -50,7 +50,7 @@ templateClass: tmpl-post
   "url": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
   "mainEntityOfPage": "{{ metadata.url }}{{ canonicalUrl or page.url }}",
   "datePublished": "{{ page.date | htmlDateString }}",
-  "dateModified": "{{ page.inputPath | htmlDateString }}",
+  "dateModified": "{{ page.inputPath | lastModifiedDate  | htmlDateString }}",
   "description": "{{ content | striptags | truncate(140) }}"
 }
 </script>
