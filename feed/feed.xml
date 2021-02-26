@@ -5,7 +5,7 @@
 	
 	<link href="https://imm9o.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://imm9o.github.io/"/>
-	<updated>2021-01-18T00:00:00-00:00</updated>
+	<updated>2021-02-26T00:00:00-00:00</updated>
 	<id>https://imm9o.github.io/</id>
 	<author>
 		<name>Islam Muhammad</name>
@@ -318,6 +318,98 @@ And here are some examples you can use it&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hQWRp-FdTpc&quot;&gt;SSH Crash Course&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=SWYqp7iY_Tc&quot;&gt;Git &amp;amp; GitHub Crash Course For Beginners&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Top skills you need to master angular 👨‍💻</title>
+		<link href="https://imm9o.github.io/posts/top_skills_you_need_to_master_angular/"/>
+		<updated>2021-02-26T00:00:00-00:00</updated>
+		<id>https://imm9o.github.io/posts/top_skills_you_need_to_master_angular/</id>
+		<content type="html">
+		  &lt;center&gt;
+&lt;p&gt;&lt;img src=&quot;https://imm9o.github.io/img/laptop.jpg&quot; alt=&quot;Flatlay Display of Electronics next to Eyeglases&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;small&gt;Photo by fauxels from Pexels&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;p&gt;Before going ahead, I assume you have a basic understanding of angular if not please check this &lt;a href=&quot;https://www.freecodecamp.org/news/want-to-learn-angular-heres-our-free-33-part-course-by-dan-wahlin-fc2ff27ab451/&quot;&gt;course&lt;/a&gt; from Dan Wahlin.&lt;/p&gt;
+&lt;h1 id=&quot;what-is-angular%3F&quot;&gt;What is angular? &lt;a class=&quot;direct-link&quot; href=&quot;#what-is-angular%3F&quot;&gt;#&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Angular is a front-end framework to build web applications that can be work across multiple platforms.&lt;/p&gt;
+&lt;p&gt;Angular has a steep learning curve composing a lot of software terms and that makes it harder for beginners but the good part is you don&#39;t have to know everything about those topics to get started because the angular team did a good job hiding much complexity away to make you focus on building rather than learning.&lt;/p&gt;
+&lt;p&gt;In this article, I will show you from my experience what you have to learn to master angular.&lt;/p&gt;
+&lt;h2 id=&quot;1.-directives&quot;&gt;1. Directives &lt;a class=&quot;direct-link&quot; href=&quot;#1.-directives&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Directives are one of the core features of Angular. They allow an Angular developer to write new, application-specific HTML syntax. In actual, directives are functions that are executed by the Angular compiler when the same finds them in the DOM.&lt;/p&gt;
+&lt;p&gt;There are three kinds of directives in Angular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Components—directives with a template.&lt;/li&gt;
+&lt;li&gt;Structural directives—change the DOM layout by adding and removing DOM elements.&lt;/li&gt;
+&lt;li&gt;Attribute directives—change the appearance or behavior of an element, component, or another directive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Learning the difference between those kinds, how to use it properly and how to create a custom one&lt;/p&gt;
+&lt;h2 id=&quot;2.-decorators&quot;&gt;2. Decorators &lt;a class=&quot;direct-link&quot; href=&quot;#2.-decorators&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Decorators provide a way to add both annotations and a meta-programming syntax for class declarations and members. Decorators are a &lt;a href=&quot;https://github.com/tc39/proposal-decorators&quot;&gt;stage 2 proposal&lt;/a&gt; for JavaScript and are available as an experimental feature of TypeScript.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you work with angular for awhile, you for sure noticed this wired syntax which is called decorators or annotations. Angular used it a lot internal and in your code, you can go deep and learn how to &lt;a href=&quot;https://ultimatecourses.com/blog/angular-decorators&quot;&gt;build one from scratch&lt;/a&gt; or learn what &lt;a href=&quot;https://angular.io/api?type=decorator&quot;&gt;angular provide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Type of decorators in angular&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Class decorators, e.g. &lt;code&gt;@Component&lt;/code&gt; and &lt;code&gt;@NgModule&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Property decorators for properties inside classes, e.g. &lt;code&gt;@Input&lt;/code&gt; and &lt;code&gt;@Output&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Method decorators for methods inside classes, e.g. &lt;code&gt;@HostListener&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Parameter decorators for parameters inside class constructors, e.g. &lt;code&gt;@Inject&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are more than 15 decorators available in angular you can check them all here &lt;a href=&quot;https://netbasal.com/exploring-the-various-decorators-in-angular-b208875b207c&quot;&gt;Exploring the Various Decorators in Angular&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;3.-dependency-injection&quot;&gt;3. Dependency injection &lt;a class=&quot;direct-link&quot; href=&quot;#3.-dependency-injection&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dependency injection, or DI, is a design pattern in which a class requests dependencies from external sources rather than creating them.&lt;br&gt;
+( &lt;a href=&quot;https://imm9o.github.io/posts/top_skills_you_need_to_master_angular/angular.io&quot;&gt;angular.io&lt;/a&gt; )&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This one of the core features in angular learning how to create it and how to provide it, you can inject anything starting from &lt;a href=&quot;https://angular.io/guide/dependency-injection-providers#injecting-a-configuration-object&quot;&gt;objects&lt;/a&gt;, &lt;a href=&quot;https://angular.io/guide/dependency-injection-providers#using-factory-providers&quot;&gt;functions&lt;/a&gt; to class.&lt;/p&gt;
+&lt;h2 id=&quot;4.-layout-composition&quot;&gt;4. Layout Composition &lt;a class=&quot;direct-link&quot; href=&quot;#4.-layout-composition&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Layout Composition is a way to composing different blocks like component, directives, pipes, and service to solve the business need&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/isaacplmann/0255c1f42ee6c1dad87586b1f6719023&quot;&gt;Advanced Component Patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oHTm5LYkgEY&quot;&gt;A Philosophy for Designing Components with Composition&lt;/a&gt; - Jeremy Elbourn | ng-conf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;5.-how-change-detection-work-in-angular&quot;&gt;5. How change detection work in angular &lt;a class=&quot;direct-link&quot; href=&quot;#5.-how-change-detection-work-in-angular&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Change detection is the mechanism designed to track changes in an application state and render the updated state on the screen. It ensures that the user interface always stays in sync with the internal state of the program.&lt;/p&gt;
+&lt;p&gt;Angular uses &lt;a href=&quot;https://indepth.dev/posts/1059/do-you-still-think-that-ngzone-zone-js-is-required-for-change-detection-in-angular&quot;&gt;ZoneJS&lt;/a&gt; to intercept events that occurred in the application and run a change detection cycle automatically.&lt;/p&gt;
+&lt;p&gt;For learning how change detections work and how to optimize it, read this article &lt;a href=&quot;https://dev.to/imm9o/rules-of-change-detections-in-angular-5hhm&quot;&gt;Change detections rules in angular&lt;/a&gt; which I wrote it before&lt;/p&gt;
+&lt;h2 id=&quot;honorable-mention&quot;&gt;Honorable Mention &lt;a class=&quot;direct-link&quot; href=&quot;#honorable-mention&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The previous mention topics earlier are the basic building blocks for any angular apps, but there are many topics not related to angular by itself so I will mention them here with good resources to learn it 😍&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Object-Oriented Programming&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It is one of the most popular programming paradigms in the software industry and it is basically a way to structure your app based on objects and the relations between them so it is called object-oriented. Learn object-oriented is a great way to succeed in the software industry and a great bounce for mastering angular. &lt;a href=&quot;https://twitter.com/moshhamedani&quot;&gt;Mosh Hamedani&lt;/a&gt; did a good job explaining object-oriented programming with nice Illustrations (My Prefer way to learn) don&#39;t miss it out &lt;a href=&quot;https://www.youtube.com/watch?v=pTB0EiLXUC8&quot;&gt;Object-oriented Programming in 7 minutes&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vDJpGenyHaA&quot;&gt;JavaScript OOP Crash Course (ES5 &amp;amp; ES6)&lt;/a&gt; - Traversy Media&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=fsVL_xrYO0w&quot;&gt;Object Oriented vs Functional Programming with TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ikwbv5dwaops3bunngs1.png&quot; alt=&quot;Principles of Object-Oriented Programming&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Typescript&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Typescript by far is &lt;a href=&quot;https://2020.stateofjs.com/en-US/awards/&quot;&gt;the most adopted technology&lt;/a&gt; in web development it helps you make your code type-safe and future proof. First, you need to know that typescript isn&#39;t a completely different programming language actually, it is called javascript superset language because every valid javascript syntax is also valid in typescript and you can check &lt;a href=&quot;https://github.com/Microsoft/TypeScript/wiki/TypeScript-Design-Goals&quot;&gt;their goals&lt;/a&gt; for more details especially points 6,7 and 8. Second, javascript has types but it is &lt;a href=&quot;https://flaviocopes.com/loosely-strongly-typed/&quot;&gt;a loosely typed language&lt;/a&gt; it means that when you declare a variable as a string you can change it later to the number, and the javascript engine will not complain so using typescript to make our code strongly typed to prevent and catch those errors earlier, Finally typescript is a compiler whiches is used to convert your code to normal javascrpt without types and on top of that angular build custom compiler called &lt;a href=&quot;https://indepth.dev/posts/1242/an-in-depth-overview-of-angular-compilers&quot;&gt;ngtsc&lt;/a&gt; It is a typescript compiler with a set of Angular transforms.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.typescriptlang.org/docs/&quot;&gt;Typescrpt offical docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/playlist?list=PL4cUxeGkcC9gUgr39Q_yD6v-bSyMwKPUI&quot;&gt;TypeScript Tutorial&lt;/a&gt; - The net ninja&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.smashingmagazine.com/2021/01/dynamic-static-typing-typescript/&quot;&gt;Dynamic Static Typing In TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.techatbloomberg.com/blog/10-insights-adopting-typescript-at-scale/&quot;&gt;10 Insights from Adopting TypeScript at Scale&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=anphffaCZrQ&quot;&gt;Deep Dive into the Angular Compiler&lt;/a&gt; - Alex Rickabaugh | AngularConnect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/uploads/articles/9ctqwkmxnzaot2ltgqy1.png&quot; alt=&quot;strong, weak, static and dynamic type&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Rxjs&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ReactiveX: Reactive programming combines the &lt;a href=&quot;https://en.wikipedia.org/wiki/Observer_pattern&quot;&gt;Observer pattern&lt;/a&gt; with the &lt;a href=&quot;https://en.wikipedia.org/wiki/Iterator_pattern&quot;&gt;Iterator pattern&lt;/a&gt; and &lt;a href=&quot;https://martinfowler.com/articles/collection-pipeline/#NestedOperatorExpressions&quot;&gt;functional programming with collections&lt;/a&gt; to fill the need for an ideal way of managing sequences of events. (&lt;a href=&quot;https://rxjs-dev/&quot;&gt;rxjs-dev&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;RxJS = Observables + Operators + Schedulers + Observer + Subscription those are the main building blocks in rxjs to achive reactive programming paradigms which are based on events or what we call event-driven. First, differentiate between &lt;a href=&quot;https://luukgruijs.medium.com/understanding-hot-vs-cold-observables-62d04cf92e03&quot;&gt;cold and hot observables&lt;/a&gt;, Second differentiate between &lt;a href=&quot;https://luukgruijs.medium.com/understanding-rxjs-subjects-339428a1815b&quot;&gt;Subject&lt;/a&gt;, &lt;a href=&quot;https://luukgruijs.medium.com/understanding-rxjs-behaviorsubject-replaysubject-and-asyncsubject-8cc061f1cfc0&quot;&gt;BehaviorSubject&lt;/a&gt;, &lt;a href=&quot;https://luukgruijs.medium.com/understanding-rxjs-behaviorsubject-replaysubject-and-asyncsubject-8cc061f1cfc0&quot;&gt;ReplaySubject&lt;/a&gt;, and &lt;a href=&quot;https://luukgruijs.medium.com/understanding-rxjs-behaviorsubject-replaysubject-and-asyncsubject-8cc061f1cfc0&quot;&gt;AsyncSubject&lt;/a&gt;, Finaly, learn the oberators esbacailly the most common used.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ultimatecourses.com/blog/rxjs-observables-observers-operators&quot;&gt;RxJS: Observables, Observers and Operators Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=2LCo926NFLI&quot;&gt;RxJS Quick Start with Practical Examples&lt;/a&gt; - Fireship&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=65Us8NwmYf4&quot;&gt;Top 7 RxJS Concepts for Angular Developers&lt;/a&gt; - Fireship&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ewcoEYS85Co&quot;&gt;RxJS Top Ten - Code This, Not That&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ldRdjc-60PM&quot;&gt;Why Should You Care About RxJS Higher-order Mapping Operators?&lt;/a&gt; - Deborah Kurata | ng-conf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://dev-to-uploads.s3.amazonaws.com/uploads/articles/spuuqochw6jfa6q9dj3e.png&quot; alt=&quot;Event Driven Architecture&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion &lt;a class=&quot;direct-link&quot; href=&quot;#conclusion&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Learning those topics will make you fluent in angular and make you more productive with a lot of confidence.&lt;/p&gt;
 
 			
 		</content>
