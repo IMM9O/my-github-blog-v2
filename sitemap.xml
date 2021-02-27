@@ -11,7 +11,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/web_components_with_angular/</loc>
-    <lastmod>2021-02-26T15:15:09.000Z</lastmod>
+    <lastmod>2021-02-27T17:29:01.000Z</lastmod>
   </url>
   
   
@@ -24,7 +24,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/what-you-gona-lose-if-you-chose-react-over-angular/</loc>
-    <lastmod>2021-02-26T15:15:09.000Z</lastmod>
+    <lastmod>2021-02-27T17:29:01.000Z</lastmod>
   </url>
   
   
@@ -39,7 +39,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</loc>
-    <lastmod>2021-02-26T15:15:09.000Z</lastmod>
+    <lastmod>2021-02-27T17:29:01.000Z</lastmod>
   </url>
   
   
@@ -54,7 +54,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/how_to_speed_up_your_workflow/</loc>
-    <lastmod>2021-02-26T15:15:09.000Z</lastmod>
+    <lastmod>2021-02-27T17:29:01.000Z</lastmod>
   </url>
   
   
@@ -69,7 +69,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/add_one_or_more_ssh_keys_in_one_machine/</loc>
-    <lastmod>2021-02-26T15:15:09.000Z</lastmod>
+    <lastmod>2021-02-27T17:29:01.000Z</lastmod>
   </url>
   
   
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/top_skills_you_need_to_master_angular/</loc>
-    <lastmod>2021-02-26T15:15:09.000Z</lastmod>
+    <lastmod>2021-02-27T17:29:01.000Z</lastmod>
   </url>
   
   
@@ -97,7 +97,7 @@
   
   <url>
     <loc>https://imm9o.github.io/about/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -110,7 +110,7 @@
   
   <url>
     <loc>https://imm9o.github.io/posts/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -123,7 +123,7 @@
   
   <url>
     <loc>https://imm9o.github.io/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -136,7 +136,7 @@
   
   <url>
     <loc>https://imm9o.github.io/page-list/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -149,7 +149,7 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -162,7 +162,7 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/tips/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -175,20 +175,7 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/git/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-  <url>
-    <loc>https://imm9o.github.io/tags/cmd/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -201,7 +188,7 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/angular/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -214,7 +201,20 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/javascript/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://imm9o.github.io/tags/cmd/</loc>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -227,7 +227,7 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/typescript/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -240,7 +240,7 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/rxjs/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
   
   
@@ -253,6 +253,6 @@
   
   <url>
     <loc>https://imm9o.github.io/tags/react/</loc>
-    <lastmod>2021-02-26T15:15:58.580Z</lastmod>
+    <lastmod>2021-02-27T17:29:38.574Z</lastmod>
   </url>
 </urlset>
