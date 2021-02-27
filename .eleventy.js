@@ -40,14 +40,18 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+// Libs
+const { DateTime } = require('luxon');
+const { promisify } = require('util');
+const hasha = require('hasha');
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
+
 // Custom plugins
 const blog = require('./_11ty/_blog');
 const tagList = require('./_11ty/getTagList');
 const GA_ID = require('./src/_data/metadata.json').googleAnalyticsId;
 
-const { DateTime } = require('luxon');
-const { promisify } = require('util');
-const hasha = require('hasha');
 const fs = require('fs');
 const execFile = promisify(require('child_process').execFile);
 
@@ -55,6 +59,9 @@ const readFile = promisify(fs.readFile);
 const stat = promisify(fs.stat);
 
 module.exports = function (eleventyConfig) {
+  // ----------------------------------------------------------------------------
+  // PLUGINS
+  // ----------------------------------------------------------------------------
   const pluginConfig = {
     imageConfig: {
       distPath: '_site',
@@ -63,25 +70,31 @@ module.exports = function (eleventyConfig) {
         "img,amp-img,amp-video,meta[property='og:image'],meta[name='twitter:image'],amp-story",
       verbose: false,
     },
-    markdownConfig: {
-      html: {
-        html: true,
-        breaks: true,
-        linkify: true,
-      },
-      link: {
-        permalink: true,
-        permalinkClass: 'direct-link',
-        permalinkSymbol: '#',
-      },
-    },
   };
 
   eleventyConfig.addPlugin(blog, pluginConfig);
   eleventyConfig.addPlugin(tagList);
 
-  /******************************* Filters & ShortCodes ******************************/
+  // ----------------------------------------------------------------------------
+  // MARKDOWN
+  // ----------------------------------------------------------------------------
 
+  /* Markdown Overrides */
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+  }).use(markdownItAnchor, {
+    permalink: true,
+    permalinkClass: 'direct-link',
+    permalinkSymbol: '#',
+  });
+
+  eleventyConfig.setLibrary('md', markdownLibrary);
+
+  // ----------------------------------------------------------------------------
+  // FILTERS & SHORTCODES
+  // ----------------------------------------------------------------------------
   eleventyConfig.addNunjucksAsyncFilter(
     'addHash',
     function (absolutePath, callback) {
@@ -162,7 +175,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('css');
   // We need to copy cached.js only if GA is used
-  // eleventyConfig.addPassthroughCopy(GA_ID ? 'js' : 'js/*[!cached].*');
+  eleventyConfig.addPassthroughCopy(GA_ID ? 'js' : 'js/*[!cached].*');
   eleventyConfig.addPassthroughCopy('fonts');
   eleventyConfig.addPassthroughCopy('_headers');
 
@@ -171,11 +184,14 @@ module.exports = function (eleventyConfig) {
   // We need to rebuild on CSS change to inline it.
   eleventyConfig.addWatchTarget('./css/');
 
-  /*****************************************************************/
-  // App Domain specific configurations
+  // ----------------------------------------------------------------------------
+  // ELEVENTY OPTIONS
+  // ----------------------------------------------------------------------------
+  // 👉 https://www.11ty.dev/docs/data-deep-merge/#data-deep-merge
   eleventyConfig.setDataDeepMerge(true);
   // Unfortunately this means .eleventyignore needs to be maintained redundantly.
   // But without this the JS build artefacts doesn't trigger a build.
+  // 👉 https://www.11ty.dev/docs/ignores/#opt-out-of-using-.gitignore
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
   // Browsersync Overrides
