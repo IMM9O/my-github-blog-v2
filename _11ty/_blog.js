@@ -14,8 +14,9 @@ module.exports = function (eleventyConfig, pluginConfig) {
   const { imageConfig } = pluginConfig;
 
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginSyntaxHighlight);
+
   eleventyConfig.addPlugin(imgDim);
   eleventyConfig.addPlugin(jsonLD);
   eleventyConfig.addPlugin(optimizeHtml);

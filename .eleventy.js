@@ -40,23 +40,24 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+// Nodejs
+const fs = require('fs');
 // Libs
 const { DateTime } = require('luxon');
-const { promisify } = require('util');
-const hasha = require('hasha');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
 
 // Custom plugins
 const blog = require('./_11ty/_blog');
+const markdownIt = require('./_11ty/plugins/markdown-it');
 const tagList = require('./_11ty/getTagList');
+
+// Filters
+const addHash = require('./_11ty/filters/add-hash');
+const lastModifiedDate = require('./_11ty/filters/last-modified-date');
+const readTime = require('./_11ty/filters/read-time');
+
+// Config
 const GA_ID = require('./src/_data/metadata.json').googleAnalyticsId;
 
-const fs = require('fs');
-const execFile = promisify(require('child_process').execFile);
-
-const readFile = promisify(fs.readFile);
-const stat = promisify(fs.stat);
 
 module.exports = function (eleventyConfig) {
   // ----------------------------------------------------------------------------
@@ -74,95 +75,28 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(blog, pluginConfig);
   eleventyConfig.addPlugin(tagList);
-
-  // ----------------------------------------------------------------------------
-  // MARKDOWN
-  // ----------------------------------------------------------------------------
-
-  /* Markdown Overrides */
-  let markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: 'direct-link',
-    permalinkSymbol: '#',
-  });
-
-  eleventyConfig.setLibrary('md', markdownLibrary);
+  eleventyConfig.addPlugin(markdownIt);
 
   // ----------------------------------------------------------------------------
   // FILTERS & SHORTCODES
   // ----------------------------------------------------------------------------
-  eleventyConfig.addNunjucksAsyncFilter(
-    'addHash',
-    function (absolutePath, callback) {
-      readFile(`_site${absolutePath}`, {
-        encoding: 'utf-8',
-      })
-        .then((content) => {
-          return hasha.async(content);
-        })
-        .then((hash) => {
-          callback(null, `${absolutePath}?hash=${hash.substr(0, 10)}`);
-        })
-        .catch((error) => callback(error));
-    }
-  );
+  eleventyConfig.addNunjucksAsyncFilter('addHash', addHash);
+  eleventyConfig.addNunjucksAsyncFilter('lastModifiedDate', lastModifiedDate);
 
-  async function lastModifiedDate(filename) {
-    try {
-      const { stdout } = await execFile('git', [
-        'log',
-        '-1',
-        '--format=%cd',
-        filename,
-      ]);
-      return new Date(stdout);
-    } catch (e) {
-      console.error(e.message);
-      // Fallback to stat if git isn't working.
-      const stats = await stat(filename);
-      return stats.mtime; // Date
-    }
-  }
-  // Cache the lastModifiedDate call because shelling out to git is expensive.
-  // This means the lastModifiedDate will never change per single eleventy invocation.
-  const lastModifiedDateCache = new Map();
-  eleventyConfig.addNunjucksAsyncFilter(
-    'lastModifiedDate',
-    function (filename, callback) {
-      const call = (result) => {
-        result.then((date) => callback(null, date));
-        result.catch((error) => callback(error));
-      };
-      const cached = lastModifiedDateCache.get(filename);
-      if (cached) {
-        return call(cached);
-      }
-      const promise = lastModifiedDate(filename);
-      lastModifiedDateCache.set(filename, promise);
-      call(promise);
-    }
-  );
-
+  eleventyConfig.addFilter('readTime', readTime);
   /** Filters: Various template engines can be extended with custom filters to modify content */
   eleventyConfig.addFilter('encodeURIComponent', function (str) {
     return encodeURIComponent(str);
   });
-
   eleventyConfig.addFilter('readableDate', (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
       'dd LLL yyyy'
     );
   });
-
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
-
   eleventyConfig.addFilter('sitemapDateTimeString', (dateObj) => {
     const dt = DateTime.fromJSDate(dateObj, { zone: 'utc' });
     if (!dt.isValid) {
