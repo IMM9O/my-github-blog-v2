@@ -42,22 +42,11 @@
 
 // Nodejs
 const fs = require('fs');
-// Libs
-const { DateTime } = require('luxon');
-
 // Custom plugins
 const blog = require('./_11ty/_blog');
-const markdownIt = require('./_11ty/plugins/markdown-it');
-const tagList = require('./_11ty/getTagList');
-
-// Filters
-const addHash = require('./_11ty/filters/add-hash');
-const lastModifiedDate = require('./_11ty/filters/last-modified-date');
-const readTime = require('./_11ty/filters/read-time');
-
+const assets = require('./_11ty/_assets');
 // Config
 const GA_ID = require('./src/_data/metadata.json').googleAnalyticsId;
-
 
 module.exports = function (eleventyConfig) {
   // ----------------------------------------------------------------------------
@@ -73,37 +62,8 @@ module.exports = function (eleventyConfig) {
     },
   };
 
-  eleventyConfig.addPlugin(blog, pluginConfig);
-  eleventyConfig.addPlugin(tagList);
-  eleventyConfig.addPlugin(markdownIt);
-
-  // ----------------------------------------------------------------------------
-  // FILTERS & SHORTCODES
-  // ----------------------------------------------------------------------------
-  eleventyConfig.addNunjucksAsyncFilter('addHash', addHash);
-  eleventyConfig.addNunjucksAsyncFilter('lastModifiedDate', lastModifiedDate);
-
-  eleventyConfig.addFilter('readTime', readTime);
-  /** Filters: Various template engines can be extended with custom filters to modify content */
-  eleventyConfig.addFilter('encodeURIComponent', function (str) {
-    return encodeURIComponent(str);
-  });
-  eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
-      'dd LLL yyyy'
-    );
-  });
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-  });
-  eleventyConfig.addFilter('sitemapDateTimeString', (dateObj) => {
-    const dt = DateTime.fromJSDate(dateObj, { zone: 'utc' });
-    if (!dt.isValid) {
-      return '';
-    }
-    return dt.toISO();
-  });
+  eleventyConfig.addPlugin(assets, pluginConfig);
+  eleventyConfig.addPlugin(blog);
 
   /*************** Manage assets ******************************************/
   eleventyConfig.addPassthroughCopy('img');
