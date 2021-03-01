@@ -194,13 +194,13 @@ but it will become a pain in ahead once that component scale up leav
 	
 	<entry>
 		<title>Change detection rules in angular</title>
-		<link href="https://imm9o.github.io/posts/rules_of_change_detections_in_angular/"/>
+		<link href="https://imm9o.github.io/posts/change_detection_rules_in_angular/"/>
 		<updated>2021-01-03T00:00:00-00:00</updated>
-		<id>https://imm9o.github.io/posts/rules_of_change_detections_in_angular/</id>
+		<id>https://imm9o.github.io/posts/change_detection_rules_in_angular/</id>
 		<content type="html">
 		  &lt;center&gt;
-&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/reserve/81gZijLSWfge41LgzqQ6_Moving%20Parts.JPG?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1352&amp;amp;q=80&quot; alt=&quot;alt&quot;&gt;&lt;br&gt;
-&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@chesteralvarez?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Chester Alvarez&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/s/photos/gear?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://images.unsplash.com/photo-1499244571948-7ccddb3583f1?ixlib=rb-1.2.1&amp;amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1489&amp;amp;q=80&quot; alt=&quot;change&quot;&gt;&lt;br&gt;
+&lt;span&gt;&lt;small&gt;Photo by &lt;a href=&quot;https://unsplash.com/@rossf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;&gt;Ross Findon&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/photos/mG28olYFgHI&quot;&gt;Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/center&gt;
 &lt;blockquote&gt;
 &lt;p&gt;What makes angular running change detection and how to optimize it&lt;/p&gt;
