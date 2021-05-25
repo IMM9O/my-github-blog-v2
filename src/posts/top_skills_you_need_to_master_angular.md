@@ -1,14 +1,14 @@
 ---  
 title: Top skills you need to master angular 👨‍💻
 description: Master those topics to master angular framework
-image: "../../img/laptop.jpg"
+image: "../../assets/img/laptop.jpg"
 date: 2021-02-26
 tags: ['angular', 'javascript', 'typescript', 'rxjs']
 ---
 
 <center>
 
-![Flatlay Display of Electronics next to Eyeglases](../../img/laptop.jpg)
+![Flatlay Display of Electronics next to Eyeglases](../../assets/img/laptop.jpg)
 
 <span><small>Photo by fauxels from Pexels</small></span>
 
@@ -72,7 +72,7 @@ Change detection is the mechanism designed to track changes in an application st
 
 Angular uses [ZoneJS](https://indepth.dev/posts/1059/do-you-still-think-that-ngzone-zone-js-is-required-for-change-detection-in-angular) to intercept events that occurred in the application and run a change detection cycle automatically.
 
-For learning how change detections work and how to optimize it, read this article [Change detections rules in angular](https://dev.to/imm9o/rules-of-change-detections-in-angular-5hhm) which I wrote it before
+For learning how change detections work and how to optimize it, read this article [Change detections rules in angular](https://imm9o.github.io/posts/change_detection_rules_in_angular/) which I wrote it before
 
 
 ## Honorable Mention

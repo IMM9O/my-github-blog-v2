@@ -1,6 +1,6 @@
 _site/
 node_modules/
 .DS_Store
-js/min.js
-js/min.js.map
+assets/js/min.js
+assets/js/min.js.map
 .vscode/

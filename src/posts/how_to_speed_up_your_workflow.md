@@ -54,11 +54,11 @@ Using the same newsletters example, you can filter emails you get with mygmail+n
 
 <center>
 <figure class="image">
-  <img src="../../img/gmail-trick-1.png" alt="gmail filter step 1">
+  <img src="../../assets/img/gmail-trick-1.png" alt="gmail filter step 1">
   <figcaption>Gmail filter step 1</figcaption>
 </figure>
 <figure class="image">
-  <img src="../../img/gmail-trick-2.png" alt="gmail filter step 2">
+  <img src="../../assets/img/gmail-trick-2.png" alt="gmail filter step 2">
   <figcaption>Gmail filter step 2</figcaption>
 </figure>
 </center>

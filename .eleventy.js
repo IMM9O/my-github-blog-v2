@@ -55,7 +55,7 @@ module.exports = function (eleventyConfig) {
   const pluginConfig = {
     imageConfig: {
       distPath: '_site',
-      assetPath: '/img/remote',
+      assetPath: '/assets/img/remote',
       selector:
         "img,amp-img,amp-video,meta[property='og:image'],meta[name='twitter:image'],amp-story",
       verbose: false,
@@ -66,17 +66,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(blog);
 
   /*************** Manage assets ******************************************/
-  eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('css');
-  // We need to copy cached.js only if GA is used
-  eleventyConfig.addPassthroughCopy(GA_ID ? 'js' : 'js/*[!cached].*');
-  eleventyConfig.addPassthroughCopy('fonts');
+  /** Server root files */
   eleventyConfig.addPassthroughCopy('_headers');
 
+  /** Images & Fonts */
+  eleventyConfig.addPassthroughCopy('assets/img');
+  eleventyConfig.addPassthroughCopy('assets/fonts');
+
+  /** JavaScript */
   // We need to rebuild upon JS change to update the CSP.
-  eleventyConfig.addWatchTarget('./js/');
+  // We need to copy cached.js only if GA is used
+  eleventyConfig.addPassthroughCopy(GA_ID ? 'assets/js' : 'assets/js/*[!cached].*');
+  eleventyConfig.addWatchTarget('./assets/js/');
+  /** CSS */
   // We need to rebuild on CSS change to inline it.
-  eleventyConfig.addWatchTarget('./css/');
+  eleventyConfig.addPassthroughCopy('assets/css');
+  eleventyConfig.addWatchTarget('./assets/css/');
 
   // ----------------------------------------------------------------------------
   // ELEVENTY OPTIONS
