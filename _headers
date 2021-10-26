@@ -3,11 +3,11 @@
   X-Frame-Options: SAMEORIGIN
   X-XSS-Protection: 1; mode=block
 
-/img/*
+/assets/img/*
   cache-control: public,max-age=31536000,immutable
-/js/*
+/assets/js/*
   cache-control: public,max-age=31536000,immutable
-/fonts/*
+/assets/fonts/*
   cache-control: public,max-age=31536000,immutable
 /favicon.svg
   cache-control: public,max-age=3600
