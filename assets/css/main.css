@@ -107,10 +107,15 @@ header aside {
 #posts li {
   margin-bottom: 0.5em;
 }
-.social-section > a {
+p.social-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p.social-section > a {
   margin: 0 1rem;
 }
-.social-section img {
+p.social-section img {
   filter: invert(1);
 }
 
