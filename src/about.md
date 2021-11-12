@@ -28,9 +28,6 @@ Also, I am really passionate about the latest technologies and updates so I wrot
   <td>
     <a href="https://www.instagram.com/imm_9o/" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/instagram.svg" alt="Instagram Profile" height="30" width="40" /></a>
   </td>
-  <td>
-  <a href="mailto: islammuhamed90@gmail.com" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/gmail.svg" alt="My EMail" height="30" width="40" /></a>
-  </td>
 </tr>
 <tr>
   <td>Portfolio</td>
@@ -40,7 +37,6 @@ Also, I am really passionate about the latest technologies and updates so I wrot
   <td>
     <a href="https://codepen.io/IMM9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/codepen.svg" alt="Codepen Profile" height="30" width="40" /></a>
   </td>
-  <td></td>
   <td></td>
 </tr>
 <tr>
@@ -54,6 +50,5 @@ Also, I am really passionate about the latest technologies and updates so I wrot
   <td>
   <a href="https://imm9o.github.io/feed/feed.xml" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/rss.svg" alt="My Website Feed" height="20" width="40" /></a>
   </td>
-  <td></td>
 </tr>
 </table>
