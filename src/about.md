@@ -8,13 +8,7 @@ eleventyNavigation:
   order: 3
 ---
 
-Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, FrontEnd Engineer, reader 📖, blogger ✍, explorer 🗺, and a geek who is passionate about the latest technology and web development 👨‍💻.
-
-I'm Software Engineer who is passionate about building large-scale frontend apps with a focus on accessibility and performance 👨‍💻.
-
-I specialize in JavaScript and have professional experience working with PHP, Angular, React, Redux, TypeScript, Ionic, Laravel, MySQL database, and familiar with Vue and WordPress.
-
-Also, I am really passionate about the latest technologies and updates so I wrote from time to time a blog posts when I am available so please keep in touch.
+Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, Frontend Engineer, blogger, reader, and geek who is passionate about the latest technologies and updates. he loves exploring and travels ✈, he loves to eat `Knafeh Nabulsi` 😋, watch soccer matches ⚽, Anime, and MCU Movies.
 
 <table align="center" border="0">
 <tr>
@@ -34,9 +28,7 @@ Also, I am really passionate about the latest technologies and updates so I wrot
   <td>
     <a href="https://github.com/IMM9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/github.svg" alt="Github Profile" height="30" width="40" /></a>
   </td>
-  <td>
-    <a href="https://codepen.io/IMM9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/codepen.svg" alt="Codepen Profile" height="30" width="40" /></a>
-  </td>
+  <td></td>
   <td></td>
 </tr>
 <tr>
