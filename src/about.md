@@ -8,7 +8,7 @@ eleventyNavigation:
   order: 3
 ---
 
-Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, Frontend Engineer, blogger, reader, and geek who is passionate about the latest technologies and updates. he loves exploring and travels ✈, he loves to eat `Knafeh Nabulsi` 😋, watch soccer matches ⚽, Anime, and MCU Movies.
+Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, Frontend Engineer, blogger, reader, and geek who is passionate about the latest technologies and updates. he loves exploring and travels ✈, he loves to eat `Knafeh Nabulsi` 😋,and watch soccer matches ⚽.
 
 <table align="center" border="0">
   <tr>
