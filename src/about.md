@@ -19,9 +19,6 @@ Hello 🙋‍♂️, My name is Islam Muhammad (AKA: IMM9O), from Egypt, Fronten
       <a href="https://linkedin.com/in/islam-muhammad" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/linkedin.svg" alt="Linkedin Profile" height="30" width="40" /></a>
     </td>
     <td>
-      <a href="https://twitter.com/IMM_9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/twitter.svg" alt="Twitter Profile" height="30" width="40" /></a>
-    </td>
-    <td>
     <a href="https://dev.to/IMM9O" target="_blank"><img style="filter: invert(1);" src="https://unpkg.com/simple-icons@v4/icons/dev-dot-to.svg" alt="Dev Profile" height="30" width="40" /></a>
     </td>
     <td>
